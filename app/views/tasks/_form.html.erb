@@ -1,0 +1,15 @@
+<div container>
+<%= simple_form_for(@task) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :details %>
+  <%# if task.edit %>
+  <% unless f.object.new_record? %>
+    <label> Completed? </label>
+    <%= f.check_box :completed %>
+    <% end %>
+  </br>
+  <%= f.submit %>
+<% end %>
+</div>
+<!--
+if edit display completed  -->
